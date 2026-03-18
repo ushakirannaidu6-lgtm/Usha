@@ -118,9 +118,9 @@ background:#2aaae2;
 <div class="logo">Appikatla.Usha Kiran Naidu</div>
 
 <ul>
-<li><a href="file:///C:/Users/ushak/OneDrive/Desktop/USHA/proabout.html">About</a></li>
-<li><a href="file:///C:/Users/ushak/OneDrive/Desktop/USHA/proskill.html">Skills</a></li>
-<li><a href="file:///C:/Users/ushak/OneDrive/Desktop/USHA/procontact.html">Contact</a></li>
+<li><a href="proabout.html">About</a></li>
+<li><a href="proskill.html">Skills</a></li>
+<li><a href="procontact.html">Contact</a></li>
 </ul>
 </nav>
 
