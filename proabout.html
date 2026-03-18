@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <title>About</title>
+      <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins',sans-serif;
+            }
+            body{
+            background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+            color: white;
+            }
+            section{
+                padding: 120px,8%,80px,8%;
+            }
+            .name-header{
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .name-header h1{
+                font-size: 48px,#0f172a,#1e293b,#0f172a;
+                letter-spacing: 2px;
+            }
+            .name-header h3{
+                font-weight: 400;
+                margin-top: 10px;
+                color: #cbd5e1;
+                font-size: 22px;
+            }
+            .name-header p{
+                max-width: 750px; 
+                margin: 20px auto 0 auto; 
+                line-height:1.8;
+                 color:#94a3b8;
+                }
+
+           .flex-container{
+            display: flex; 
+            gap:60px;
+        }
+
+        .left-content{
+            flex:1;
+        }
+
+      .left-content h2{
+        font-size:36px;
+       }
+      .left-content span{ 
+        color:#0f172a,#1e293b,#0f172a; 
+      }
+       .tab-buttons{
+        margin:25px 0;
+    }
+    .tab-buttons button{
+      padding: 10px 25px;
+       margin-right:15px; 
+       border:none; 
+        border-radius: 25px;
+         background:black; 
+         color:white; 
+         cursor:pointer;
+          transition:0.3s; 
+          border:1px solid rgba(255,255,255,0.1);
+        }
+
+      .tab-buttons button.active, .tab-buttons button:hover{
+        background:black;
+         color:white;
+        }
+
+.tab-content{
+    margin-top: 20px; 
+    line-height:1.9;
+    color:#cbd5e1; 
+    min-height:200px; 
+    transition:opacity 0.35 ease-in-out;
+    }
+.img-grid{
+        flex:1; 
+        display:grid;
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+}
+
+.img-grid img{
+          width:100%; 
+          height:400px; 
+          object-fit:cover; 
+          border-radius: 15px; 
+          transition:0.4s;
+}
+.img-grid img:hover{
+    transform: scale(1.05);
+}
+     .contact-info{
+        margin-top: 20px; 
+        color:#94a3b8;
+    }
+   .contact-info a{
+    color:black;
+     text-decoration:none;
+    }
+    .contact-info i{
+        margin-right:5px;
+       align-content: center;
+    }
+    .tab-content{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    padding:40px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 20px 50px rgba(0,0,0,0.6);
+    color:white;
+    position:relative;
+}
+
+   </style> 
+    </head>
+    <body>
+
+      <section>
+        <div class="name-header">
+         <h1>Usha Kiran</h1>
+         <h3>Engineering Students</h3>
+         <p>As a student passionate about programming and emerging technologies, 
+            I’m on a journey to turn complex technical concepts into simple, 
+            practical understanding.I believe learning should build clarity, 
+            confidence, and real-world problem-solving skills — not confusion.
+            Still learning. Still growing. 🚀
+         </p>
+        </div>
+        <div class="flex-container">
+            <div class="flex-content">
+                <h2>Moments of 
+                    <span> My Life</span>
+                </h2>
+                <div class="tab-buttons">
+                    <button class="active" onclick="showContent('me',this)">Me</button>
+                    <!-- <a href="file:///C:/Users/ushak/OneDrive/Desktop/USHA/nabout.html">
+               <button onclick="showContent('friends',this)"class>Friends</button>
+              </a> -->
+                </div>
+                <div class="tab-content" id="content">
+                  Self-love is not about being perfect or having 
+                  everything figured out. It’s about accepting 
+                  who I am in this moment — with my strengths,
+                   my flaws, my progress, and even my mistakes. 
+                   <br>
+                   <br>
+                   It’s choosing to be patient with myself when 
+                   things don’t go as planned and understanding
+                    that growth takes time. As a student and as
+                    a person, I’m learning that comparison only 
+                    steals joy, and self-doubt only slows progress.
+                    <br>
+                    <br> 
+                    Self-love means trusting my journey, celebrating
+                    small wins, forgiving myself for setbacks, and 
+                    continuing to move forward with confidence. It’s 
+                    about protecting my peace, setting healthy boundaries, 
+                    and reminding myself that I am enough — not because I 
+                    have achieved everything, but because I am trying, learning, 
+                    and growing every single day.
+                </div>
+            </div>
+            <div class="img-grid" id="imgGrid">
+                <img src="IMG_20251111_091316.jpg">
+                <img src="Screenshot_2023-07-09_101240.jpg">
+                <img src="Screenshot_2023-07-09_101324.jpg">
+                <img src="Screenshot_2024-01-15_164326.jpg">
+            </div>
+        </div>
+        <div class="contact-info" align="center">
+            <h2 style="color: black;"> <u>Contact with me</u> </h2><br>
+            <p>
+                <i class="fa phone">
+                
+                </i>
+                <a href="tel:919999999999">+91 8919262416</a>
+            </p>
+            <br>
+            <p>
+                <i class="fa envolve">
+                    
+                </i>
+                <a href="ushakirannaidu6@gmail.com">ushakirannaidu6@gmail.com</a>
+            </p>
+        </div>
+      </section>
+      <script>
+
+      function showContent(type, button) {
+
+const content=document.getElementById("content");
+const buttons= document.querySelectorAll(".tab-buttons button");
+const imageGrid =document.getElementById("imageGrid"); 
+// buttons.forEach(btn => btn.classList.remove("active")); button.classList.add("active");
+content.style.opacity = 0;
+
+setTimeout(() => {
+
+if(type === "me"){
+
+  content.innerHTML =
+                   `Self-love is not about being perfect or having 
+                  everything figured out. It’s about accepting 
+                  who I am in this moment — with my strengths,
+                   my flaws, my progress, and even my mistakes.
+                   <br>
+                   <br>
+                   It’s choosing to be patient with myself when 
+                   things don’t go as planned and understanding
+                    that growth takes time. As a student and as
+                    a person, I’m learning that comparison only 
+                    steals joy, and self-doubt only slows progress.
+                    <br>
+                    <br> 
+                    Self-love means trusting my journey, celebrating
+                    small wins, forgiving myself for setbacks, and 
+                    continuing to move forward with confidence. It’s 
+                    about protecting my peace, setting healthy boundaries, 
+                    and reminding myself that I am enough — not because I 
+                    have achieved everything, but because I am trying, learning, 
+                    and growing every single day. `;
+            imageGrid.innerHTML=
+                ` <img src="amma.jpg.jpeg">
+                <img src="IMG_20240816_180900.jpg">
+                <img src="Snapchat-367555628.jpg">
+                <img src="Snapchat-380382799.jpg">`
+                ;
+                roadmapContainer.innerHTML = '';
+            }
+             if(type === "friends") {
+           content.innerHTML = `
+                              Friendship is one of the most meaningful parts of being human. 
+                               It’s a relationship built not on obligation, but on choice. 
+                               Unlike family, friends are the people we choose to let into 
+                               our lives—and who choose us back.
+                               <br>
+                               At its heart, friendship is about trust, understanding, 
+                               and shared experiences. A good friend is someone you can 
+                               laugh with during your best moments and lean on during 
+                               your worst. They don’t have to solve your problems; 
+                               sometimes just listening is enough.
+                                <br>
+                                <br>
+                               Friendship also helps us grow. Friends challenge our 
+                               ideas, support our dreams, and sometimes tell us the 
+                               truth when we need to hear it. They see parts of us 
+                               we might not notice ourselves.`;
+                         imageGrid.innerHTML=`
+                                <img src="mam.jpg">
+                                <img src="mawa.jpg">
+                               <img src="IMG-20250625-WA0004.jpg">
+                             <img src="frnds.png">`;
+             steps.forEach(step =>step.classList.remove("show")); 
+             steps.forEach((step, index) => {
+             setTimeout(() => step.classList.add("show"),
+            index * 300);
+            });
+            }    
+           content.style.opacity = 1;
+            })
+        }
+        
+        </script>
+        
+    </body>
+</html>
